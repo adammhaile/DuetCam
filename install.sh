@@ -5,10 +5,10 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-# apt-get -y install git cmake
-# apt-get -y install libjpeg62-turbo-dev
-# apt-get -y install libjpeg8-dev
-# apt-get -y --no-install-recommends install imagemagick ffmpeg libv4l-dev
+apt-get -y install git cmake
+apt-get -y install libjpeg62-turbo-dev
+apt-get -y install libjpeg8-dev
+apt-get -y --no-install-recommends install imagemagick ffmpeg libv4l-dev
 
 TMP_DIR=$(mktemp -d -t ci-XXXXXXXXXX)
 git clone https://github.com/jacksonliam/mjpg-streamer.git ${TMP_DIR}
