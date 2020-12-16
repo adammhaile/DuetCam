@@ -33,3 +33,11 @@ sudo systemctl restart webcamd.service
 ```
 
 If you change the config as described above, simply use the restart option to have those changes take effect.
+
+## Usage
+
+Once the service is running, you should be able to go to `http://<pi_ip_address>:8080/` and you will be presented with a test page containing both a still frame and a live mjpg stream. You can access these directly via:
+
+- `http://<pi_ip_address>:8080/action=snapshot`: A single frame captured at the time the image is requested. Refresh the image/page to capture a new image.
+- `http://<pi_ip_address>:8080/action=stream`: A live mjpg formatted video stream from the camera. This can be embeded into any HTML page with nothing more than the `<img>` tag.
+
